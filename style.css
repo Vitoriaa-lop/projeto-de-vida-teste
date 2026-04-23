@@ -1,46 +1,92 @@
-/* ... (seu código anterior permanece igual até aqui) */
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap');
+
+:root {
+    --cor-de-fundo: #1E1E1E;
+    --verde: #6FFF57;
+    --branco: #FFFFFF;
+    --botao-ativo: #3A375E;
+    --botao-inativo: rgba(58, 55, 94, 0.5);
+    --texto-fundo: rgba(58, 55, 94, 0.3);
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+    color: var(--branco);
+    font-family: 'Chakra Petch', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.conteudo-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.titulo-principal {
+    font-size: 32px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.titulo-principal span {
+    color: var(--verde);
+}
+
+.botoes {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.botao {
+    background-color: var(--botao-inativo);
+    color: var(--branco);
+    border: none;
+    padding: 15px;
+    font-family: inherit;
+    cursor: pointer;
+    flex: 1;
+    min-width: 150px;
+    border-top: 2px solid var(--botao-ativo);
+    transition: 0.3s;
+}
+
+.botao.ativo {
+    background-color: var(--botao-ativo);
+    border-bottom: 4px solid var(--verde);
+}
 
 .abas-textos {
     background-color: var(--texto-fundo);
     padding: 40px;
-    border-radius: 0 0 40px 40px;
-    width: 100%; /* Garante que preencha a largura */
+    border-radius: 0 0 20px 20px;
+    text-align: center;
+    width: 100%;
     box-sizing: border-box;
 }
 
 .aba-conteudo {
-    display: none; /* Corrigido: display: none */
+    display: none;
 }
 
 .aba-conteudo.ativo {
-    display: block; /* Corrigido: display: block */
-}
-
-.aba-conteudo-titulo-principal {
-    font-size: 28px;
-    text-align: center;
-    margin-bottom: 20px;
+    display: block;
 }
 
 .aba-conteudo-titulo-secundario {
-    text-align: center;
     color: var(--verde);
     text-transform: uppercase;
-    font-size: 14px;
-    margin-bottom: 10px;
+    margin-top: 20px;
 }
 
 .contador {
-    font-size: 40px;
-    text-align: center;
+    font-size: 48px;
     font-weight: bold;
-}
-
-/* Ajuste no layout dos botões para desktop */
-@media screen and (min-width: 768px) {
-    .botoes {
-        display: flex;
-        width: 100%;
-    }
-    /* ... resto do seu media query */
+    margin-top: 10px;
 }

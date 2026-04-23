@@ -1,6 +1,7 @@
 const botoes = document.querySelectorAll(".botao");
-const textos = document.querySelectorAll(".aba-conteudo"); // Corrigido: querySelectorAll e nome da variável
+const textos = document.querySelectorAll(".aba-conteudo");
 
+// Lógica das Abas
 for (let i = 0; i < botoes.length; i++) {
     botoes[i].onclick = function () {
         for (let j = 0; j < botoes.length; j++) {
@@ -12,8 +13,9 @@ for (let i = 0; i < botoes.length; i++) {
     }
 }
 
+// Lógica do Cronômetro
 const contadores = document.querySelectorAll(".contador");
-const tempoObjetivo1 = new Date("2024-12-31T23:59:59"); // Data futura de exemplo
+const tempoObjetivo1 = new Date("2026-12-31T00:00:00");
 
 function calculaTempo(tempoObjetivo) {
     let tempoAtual = new Date();
@@ -28,4 +30,18 @@ function calculaTempo(tempoObjetivo) {
     minutos %= 60;
     horas %= 24;
 
-    if (tempoFinal >
+    if (tempoFinal > 0) {
+        return dias + " dias " + horas + "h " + minutos + "m " + segundos + "s";
+    } else {
+        return "Prazo Encerrado";
+    }
+}
+
+function atualizaCronometro() {
+    for (let i = 0; i < contadores.length; i++) {
+        contadores[i].textContent = calculaTempo(tempoObjetivo1);
+    }
+}
+
+setInterval(atualizaCronometro, 1000);
+atualizaCronometro();
