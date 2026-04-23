@@ -25,12 +25,12 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 800px;
+    max-width: 1000px; /* Aumentado para o projeto ficar mais largo */
     padding: 20px;
 }
 
 .titulo-principal {
-    font-size: 32px;
+    font-size: 42px; /* Título maior */
     margin-bottom: 20px;
     width: 100%;
 }
@@ -41,18 +41,18 @@ body {
 
 .botoes {
     display: flex;
-    flex-wrap: wrap;
+    width: 100%;
 }
 
 .botao {
     background-color: var(--botao-inativo);
     color: var(--branco);
     border: none;
-    padding: 15px;
+    padding: 20px; /* Botões mais altos */
     font-family: inherit;
+    font-size: 18px;
     cursor: pointer;
     flex: 1;
-    min-width: 150px;
     border-top: 2px solid var(--botao-ativo);
     transition: 0.3s;
 }
@@ -62,12 +62,14 @@ body {
     border-bottom: 4px solid var(--verde);
 }
 
+/* O "QUADRADO" DAS INFORMAÇÕES */
 .abas-textos {
     background-color: var(--texto-fundo);
-    padding: 40px;
-    border-radius: 0 0 20px 20px;
+    padding: 80px 40px; /* Aumentado o espaço interno (cima/baixo e lados) */
+    border-radius: 0 0 40px 40px;
     text-align: center;
     width: 100%;
+    min-height: 350px; /* Garante que o quadrado seja alto */
     box-sizing: border-box;
 }
 
@@ -79,14 +81,21 @@ body {
     display: block;
 }
 
+.aba-conteudo-titulo-principal {
+    font-size: 32px; /* Título interno maior */
+    margin-bottom: 20px;
+}
+
 .aba-conteudo-titulo-secundario {
     color: var(--verde);
     text-transform: uppercase;
-    margin-top: 20px;
+    font-size: 16px;
+    margin-bottom: 20px;
 }
 
+/* CRONÔMETRO GRANDE */
 .contador {
-    font-size: 48px;
+    font-size: 64px; /* Números bem grandes */
     font-weight: bold;
-    margin-top: 10px;
+    color: var(--branco);
 }
