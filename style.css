@@ -1,0 +1,46 @@
+/* ... (seu código anterior permanece igual até aqui) */
+
+.abas-textos {
+    background-color: var(--texto-fundo);
+    padding: 40px;
+    border-radius: 0 0 40px 40px;
+    width: 100%; /* Garante que preencha a largura */
+    box-sizing: border-box;
+}
+
+.aba-conteudo {
+    display: none; /* Corrigido: display: none */
+}
+
+.aba-conteudo.ativo {
+    display: block; /* Corrigido: display: block */
+}
+
+.aba-conteudo-titulo-principal {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.aba-conteudo-titulo-secundario {
+    text-align: center;
+    color: var(--verde);
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.contador {
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Ajuste no layout dos botões para desktop */
+@media screen and (min-width: 768px) {
+    .botoes {
+        display: flex;
+        width: 100%;
+    }
+    /* ... resto do seu media query */
+}
